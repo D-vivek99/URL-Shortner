@@ -1,0 +1,26 @@
+=================================================================================================================================================================
+*** URL Shortner ***
+
+Project Description:
+
+Developed a URL shortener application that allows users to create shortened versions of long URLs, making them easier to share and manage. The application generates unique short codes for each URL, which redirect users to the original long URL when accessed.
+
+-----------------------------------------------------------
+
+Key Features:
+
+1. Shortening URLs: Users can input long URLs into the application, which generates a unique short code for each URL.
+2. Redirection: When users access the shortened URL, they are redirected to the original long URL.
+3. Custom URLs: Optionally, users can choose custom short codes for their URLs, if available.
+4. Analytics: Track the number of clicks and other analytics for each shortened URL.
+5. User Authentication: Implement user authentication to allow only registered users to manage their shortened URLs.
+
+-----------------------------------------------------------
+
+Technologies Used:
+
+- Front-End: HTML, CSS, JavaScript
+- Back-End: Node.js, Express.js
+- Database: MongoDB (or any other database for storing URL mappings)
+
+=================================================================================================================================================================

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/header') %>
+    <title>URL Shortner | About</title>
+    <style>
+        .Heading {
+            font-family: 'Roboto';
+            /* margin-bottom: 30px; */
+        }
+    </style>
+</head>
+<body>
+    <%- include('./partials/nav') %>
+    <div class="container my-3">
+        <h1 class="Heading">About Us</h1>
+        <p>
+            A URL shortener service is a web application or tool that converts long URLs into shorter, more manageable links. These shorter URLs typically redirect users to the original, longer URL when accessed. These services are commonly used to make sharing links more convenient, especially on platforms with character limitations, such as social media sites like Twitter.
+        </p>
+        <hr>
+        <div class="my-4">
+            <h4>
+                Here's how a URL shortener service typically works
+            </h4>
+            <ul style="list-style-type:circle">
+                <li class="my-2"><strong>Input Long URL:</strong> Users provide the long URL they want to shorten to the URL shortener service.</li>
+                <li class="my-2"><strong>Generate Short URL:</strong> The service generates a unique, shortened version of the original URL, typically consisting of a random string of characters or a shortened version of the domain name.</li>
+                <li class="my-2"><strong>Redirect:</strong> When someone clicks on the shortened URL, they are redirected through the URL shortener's server to the original, longer URL.</li>
+                <li class="my-2"><strong>Tracking:</strong> Some URL shortener services offer analytics or tracking features, allowing users to monitor the number of clicks, geographic location of users, and other metrics related to the usage of the shortened link.</li>
+            </ul>
+        </div>
+
+            <hr>
+
+        <div class="my-4">
+            <h4>
+                URL shortener services are commonly used in various scenarios like
+            </h4>
+            <ol>
+                <li class="my-1">Sharing links on social media platforms where character limits are in place.</li>
+                <li class="my-1">Sending concise links in emails or text messages.</li>
+                <li class="my-1">Tracking click-through rates for marketing campaigns or affiliate links.</li>
+                <li class="my-1">Making complex URLs more readable and user-friendly.</li>
+            </ol>
+        </div>
+    </div>
+
+
+    <%- include('./partials/scripts') %>
+</body>
+</html>

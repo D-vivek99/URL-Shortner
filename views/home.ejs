@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/header') %>
+    <title>URL Shortner | Home</title>
+</head>
+<body style="text-align: center;">
+    <%- include('./partials/nav') %>
+
+    <div class="container my-3">
+        
+        <h1 class="Heading">URL Shortener Service</h1>
+            <% if (locals.id) { %>
+            <p>URL: http://localhost:1111/url/<%= id %></p>
+            <% } %>
+        <div>
+            <form action="/url" method="post">
+                <label for="" name="">Enter Original URL</label>
+                <input type="text" name="url" placeholder="https://www.example.com">
+                <button type="submit" class="btn btn-sm btn-primary mx-1">Generate URL</button>
+            </form>
+        </div>
+
+        <div class="my-3">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                    <th>#</th>
+                    <th>ShortID</th>
+                    <th>Original URL</th>
+                    <th>Visit Counts</th>
+                    <th>Visit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% if (locals.urls) { %>
+                        <% urls.forEach((url, index) => { %>
+                        <tr>
+                            <td><strong><%= index + 1 %></strong></td>
+                            <td><%= url.shortId %></td>
+                            <td><%= url.redirectURL %></td>
+                            <td><strong><%= url.visitHistory.length %></strong></td>
+                            <td><a href="http://localhost:1111/url/<%= url.shortId %>" target="_blank" rel="noopener noreferrer">http://localhost:1111/url/<%= url.shortId %></a></td>
+                        </tr>
+                        <% }) %>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <%- include('./partials/scripts') %>
+</body>
+</html>
