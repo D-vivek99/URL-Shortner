@@ -16,14 +16,13 @@ async function handleGenerateNewShortURL (req, res) {
 
     const allURLs = await URL.find({createdBy: req.user._id});
     const user = await User.findOne({_id: req.user._id});
-    // return res.status(201).json({msg: "success", id: shortID});/
+
     return res.render("home", {id: shortID, urls: allURLs, user});
 };
 
 async function handleGetAnalytics (req, res) {
     const shortId = req.params.shortId;
     const result = await URL.findOne({shortId});
-    // console.log(result);
     return res.json({totalVisits: result.visitHistory.length, analytics: result.visitHistory});
 };
 

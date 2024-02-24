@@ -21,12 +21,6 @@ async function handleUserLogin(req, res) {
         error: "Invalid username or password"
     });
 
-    // const sessionId = uuidv4();  // Statefull
-    // setUser(sessionId, user);
-    // res.cookie("uid", sessionId);
-    // return res.redirect("/");
-
-    // Stateless Authentication: using JWT
     const token = setUser(user);
     res.cookie("token", token);
     return res.redirect("/");
